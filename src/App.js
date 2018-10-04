@@ -8,45 +8,81 @@ class App extends Component {
     this.state = {
       players: [
         {
+          id: 1,
           name: "Utzipher",
-          id: 1
+          score: 0
         },
         {
+          id: 2,
           name: "Treasure",
-          id: 2
+          score: 0
         },
         {
+          id: 3,
           name: "Ashley",
-          id: 3
+          score: 0
         },
         {
+          id: 4,
           name: "James",
-          id: 4
+          score: 0
         }
       ]
     }
     this.handleRemovePlayer = this.handleRemovePlayer.bind(this);
+    this.incrementScore = this.incrementScore.bind(this);
+    this.decrementScore = this.decrementScore.bind(this);
   }
 
   handleRemovePlayer = (id) => {
-    this.setState( prevState => {
-      return {
-        players: prevState.players.filter( player => player.id !== id)
-      }
+    this.setState({
+      players: this.state.players.filter( player => player.id !== id)
+    })
+  }
+
+  previousPlayerId = 4
+
+  handleAddPlayer = (name) => {
+    this.setState({
+      players: [
+        ...this.state.players,
+        {
+          name,
+          score: 0,
+          id: this.previousPlayerId += 1
+        }
+      ]
+    })
+  }
+
+  incrementScore = (index) => {
+    this.setState({
+      score: this.state.players[index].score += 1
+    })
+  }
+
+
+  decrementScore = (index) => {
+    this.setState({
+      score: this.state.players[index].score -= 1
     })
   }
 
   render() {
     console.log(this.state.players)
+    const {players} = this.state;
+    const {handleRemovePlayer, incrementScore, decrementScore, handleAddPlayer} = this;
 
     return (
       <div>
 
         <Header
           title="Scoreboard"
-          totalPlayers={3}
-          initialPlayers={this.state.players}
-          removePlayer={this.handleRemovePlayer}
+          initialPlayers={players}
+          removePlayer={handleRemovePlayer}
+          increaseScore={incrementScore}
+          decreaseScore={decrementScore}
+          addPlayer={handleAddPlayer}
           />
 
       </div>
