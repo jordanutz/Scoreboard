@@ -10,13 +10,20 @@ const Header = (props) => {
       <Panel className="panel-container">
         <Panel.Heading>
           <div>{props.title}</div>
-          <div>Players: {props.totalPlayers}</div>
+          <div>Players: {props.initialPlayers.length}</div>
         </Panel.Heading>
         <Panel.Body className="player-profile">
           <div className="player">
-            <Players name="Utzipher" score={50}/>
-            <Players name="Aisha" score={20}/>
-            <Players name="Sean" score={30}/>
+            {props.initialPlayers.map( (player, id) => {
+
+              return <Players
+                key={id}
+                name={player.name}
+                removePlayer={props.removePlayer}
+                id={player.id}
+                />
+
+            })}
           </div>
         </Panel.Body>
       </Panel>
