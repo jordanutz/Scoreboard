@@ -1,0 +1,69 @@
+.players-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container h1 {
+  font-size: 3em;
+}
+
+.mainstopwatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.75em;
+  font-family: 'Passion One', cursive;
+  text-transform: uppercase;
+}
+
+.panel-container {
+  width: 65%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.panel-default > .panel-heading {
+  background-image: linear-gradient(to top, #00c6fb 5%, #005bea 100%);
+  color: white;
+  font-family: "Android 101";
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mainsecondary-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.player-profile {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+
+.player {
+  width: 100%;
+  height: auto;
+}
+
+.counter {
+  height: auto;
+}
+
+.player-profile {
+  font-family: 'Passion One', cursive;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #333;
+}
+
+.mainstats-container {
+  display: flex;
+}

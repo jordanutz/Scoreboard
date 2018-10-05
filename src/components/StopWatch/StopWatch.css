@@ -1,0 +1,37 @@
+.stopwatch-container {
+  width: 100%;
+  height: auto;
+}
+
+.stopwatch-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.stopwatch-buttons {
+  margin-top: .5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stopwatch-button {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  width: auto;
+  color: white;
+  font-size: .75em;
+  width: auto;
+  border: none;
+  font-family: 'Passion One', cursive;
+  text-transform: uppercase;
+}
+
+.stopwatch-button:hover {
+  background: none;
+}
+
+.stopwatch-button:focus {
+  background: none;
+}

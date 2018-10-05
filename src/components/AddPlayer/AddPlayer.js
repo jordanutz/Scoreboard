@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {FormGroup, FormControl, Button} from 'react-bootstrap';
+import './AddPlayer.css'
 
 
 class AddPlayer extends Component {
@@ -36,8 +37,7 @@ class AddPlayer extends Component {
 
     return (
       <div className="addplayer-container">
-        <h1>Add a Player:</h1>
-          <form>
+          <form className="form-container">
             <FormGroup
              controlId="formBasicText"
            >
@@ -45,15 +45,15 @@ class AddPlayer extends Component {
            <FormControl
              type="text"
              value={this.state.addPlayer}
-             placeholder="Player Name"
+             placeholder="Enter a Player's Name"
              onChange={this.handleAddPlayer}
+             className="form-input"
            />
 
             </FormGroup>
           </form>
 
           <Button onClick={this.handleSubmit}>Add Player</Button>
-
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 class App extends Component {
   constructor() {
@@ -74,9 +74,9 @@ class App extends Component {
     const {handleRemovePlayer, incrementScore, decrementScore, handleAddPlayer} = this;
 
     return (
-      <div>
+      <div className="app-container">
 
-        <Header
+        <Main
           title="Scoreboard"
           initialPlayers={players}
           removePlayer={handleRemovePlayer}
