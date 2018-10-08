@@ -28,12 +28,12 @@ const Header = (props) => {
           <div className="mainsecondary-container">
             <Grid>
               <Row className="show-grid">
-                <Col xs={12} md={9}>
+                <Col xs={12} md={8}>
                   <div className="mainstats-container">
                     <Stats initialPlayers={initialPlayers} />
                   </div>
                 </Col>
-                <Col xs={6} md={3}>
+                <Col xs={6} md={4} className="query-column">
                   <div className="mainstopwatch-container">
                     <StopWatch />
                   </div>
@@ -59,7 +59,7 @@ const Header = (props) => {
 
             })}
 
-            <AddPlayer addPlayer={addPlayer}/>
+            <AddPlayer addPlayer={addPlayer} />
           </div>
         </Panel.Body>
       </Panel>

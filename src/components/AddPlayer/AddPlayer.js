@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {FormGroup, FormControl, Button} from 'react-bootstrap';
 import './AddPlayer.css'
+import AddCircle from './Assets/AddCircle.svg'
 
 
 class AddPlayer extends Component {
@@ -35,6 +36,9 @@ class AddPlayer extends Component {
     console.log(this.state.addPlayer)
     console.log(this.props)
 
+    const {addPlayer} = this.state;
+    const isEnabled = addPlayer.length > 0;
+
     return (
       <div className="addplayer-container">
           <form className="form-container">
@@ -53,7 +57,13 @@ class AddPlayer extends Component {
             </FormGroup>
           </form>
 
-          <Button onClick={this.handleSubmit}>Add Player</Button>
+          <img
+            src= {AddCircle}
+            className="add-icon"
+            disabled={!isEnabled}
+            onClick={this.handleSubmit} />
+
+
       </div>
     )
   }

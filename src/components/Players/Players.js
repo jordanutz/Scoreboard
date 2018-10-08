@@ -2,8 +2,12 @@ import React, {PureComponent} from 'react';
 import Counter from '../Counter/Counter';
 import './Players.css'
 import {Button} from 'react-bootstrap';
+import Cancel from './Assets/Cancel.svg';
 
 class Players extends PureComponent {
+
+
+
   render() {
     const {name,
           removePlayer,
@@ -15,8 +19,10 @@ class Players extends PureComponent {
 
     return (
       <div className="player-container">
-        <span className="player-name">{name}</span>
-        <Button onClick={ () => removePlayer(id) }>Remove Player</Button>
+        <div className="player-name">
+          <h2>{name}</h2>
+        </div>
+        <img src={Cancel} className="remove-button" onClick={ () => removePlayer(id)} />
         <Counter
           score={score}
           increaseScore={increaseScore}

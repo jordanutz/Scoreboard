@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
 import Main from './components/Main/Main';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStroopwafel)
 
 class App extends Component {
   constructor() {
@@ -9,29 +14,21 @@ class App extends Component {
       players: [
         {
           id: 1,
-          name: "Utzipher",
+          name: "Jordan",
           score: 0
         },
-        {
-          id: 2,
-          name: "Treasure",
-          score: 0
-        },
-        {
-          id: 3,
-          name: "Ashley",
-          score: 0
-        },
-        {
-          id: 4,
-          name: "James",
-          score: 0
-        }
-      ]
+      ],
+      hover: false
     }
     this.handleRemovePlayer = this.handleRemovePlayer.bind(this);
     this.incrementScore = this.incrementScore.bind(this);
     this.decrementScore = this.decrementScore.bind(this);
+  }
+
+  updateHover = () => {
+    this.setState({
+      hover: !this.state.hover
+    })
   }
 
   handleRemovePlayer = (id) => {
@@ -40,7 +37,7 @@ class App extends Component {
     })
   }
 
-  previousPlayerId = 4
+  previousPlayerId = 1
 
   handleAddPlayer = (name) => {
     this.setState({
@@ -67,6 +64,8 @@ class App extends Component {
       score: this.state.players[index].score -= 1
     })
   }
+
+
 
   render() {
     console.log(this.state.players)

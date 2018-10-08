@@ -9,7 +9,7 @@ const Counter = (props) =>  {
   const {index, decreaseScore, increaseScore, score} = props;
 
   return (
-    <div className="counter">
+    <div className="counter-container">
       <Button className="decrement-button" onClick={() => decreaseScore(index)}> - </Button>
       <span className="player-score">{score}</span>
       <Button className="increment-button" onClick={() => increaseScore(index)}> + </Button>

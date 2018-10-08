@@ -7,6 +7,7 @@
 
 .main-container h1 {
   font-size: 3em;
+  font-family: 'Invasion 2028';
 }
 
 .mainstopwatch-container {
@@ -28,9 +29,8 @@
 }
 
 .panel-default > .panel-heading {
-  background-image: linear-gradient(to top, #00c6fb 5%, #005bea 100%);
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
   color: white;
-  font-family: "Android 101";
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -66,4 +66,28 @@
 
 .mainstats-container {
   display: flex;
+}
+
+@media screen and (max-width: 620px) {
+  .panel-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+
+  .main-container h1 {
+    font-size: 2em;
+    font-family: 'Invasion 2028';
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .query-column {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .stats-container {
+    text-align: center;
+  }
 }
