@@ -39,3 +39,9 @@
   background: white;
   color: black;
 }
+
+@media screen and (max-width: 990px) {
+  .stopwatch-buttons {
+    justify-content: center;
+  }
+}
