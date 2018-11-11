@@ -1,0 +1,42 @@
+@import '../../index';
+
+.Stopwatch {
+  width: 100%;
+  height: auto;
+
+  .StopwatchInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .StopwatchButtons {
+    margin-top: .5em;
+    display: flex;
+    justify-content: space-evenly;
+
+    Button {
+      background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      width: auto;
+      color: black;
+      font-size: .75em;
+      width: auto;
+      border: none;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    }
+
+    Button:hover {
+      background: white;
+      color: black;
+      transition: .5s
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .stopwatch-buttons {
+    justify-content: center;
+  }
+}

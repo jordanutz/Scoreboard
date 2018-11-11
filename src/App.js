@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './Reset.scss';
 import Main from './components/Main/Main';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

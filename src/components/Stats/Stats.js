@@ -1,5 +1,5 @@
 import React from 'react';
-import './Stats.css'
+import './Stats.scss'
 
 const Stats = (props) => {
 
@@ -12,7 +12,7 @@ const Stats = (props) => {
   }, 0);
 
   return (
-    <div className="stats-container">
+    <div className="Stats">
       <h2>Players: {totalPlayers} </h2>
       <h2>Total Points: {totalPoints} </h2>
 

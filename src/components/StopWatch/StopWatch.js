@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
-import './StopWatch.css'
+import './StopWatch.scss'
 
 class StopWatch extends Component {
   constructor() {
@@ -52,17 +52,17 @@ class StopWatch extends Component {
     const {isRunning} = this.state;
 
     return (
-      <div className="stopwatch-container">
-        <div className="stopwatch-info">
+      <div className="Stopwatch">
+        <div className="StopwatchInfo">
           <h2>Stopwatch</h2>
-          <span className="stopwatch-time">{seconds}</span>
+          <span>{seconds}</span>
         </div>
 
-        <div className="stopwatch-buttons">
-          <Button className="stopwatch-button" onClick={handleStopWatch}>
+        <div className="StopwatchButtons">
+          <Button onClick={handleStopWatch}>
             {isRunning ? 'Stop' : 'Start'}
           </Button>
-          <Button className="stopwatch-button" onClick={resetStopWatch}>Reset</Button>
+          <Button onClick={resetStopWatch}>Reset</Button>
         </div>
       </div>
     )

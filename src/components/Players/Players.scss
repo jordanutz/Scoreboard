@@ -1,0 +1,25 @@
+@import '../../index';
+
+
+.Player  {
+  display: flex;
+  justify-content: space-between;
+  padding: .5em;
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  .PlayerName {
+    h2 {
+      cursor: pointer;
+    }
+  }
+
+  .RemoveButton {
+    position: absolute;
+    left: 0;
+    width: .5em;
+    height: .5em;
+    cursor: pointer;
+  }
+}

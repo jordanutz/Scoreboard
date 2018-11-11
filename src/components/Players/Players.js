@@ -1,12 +1,10 @@
 import React, {PureComponent} from 'react';
 import Counter from '../Counter/Counter';
-import './Players.css'
+import './Players.scss'
 import {Button} from 'react-bootstrap';
 import Cancel from './Assets/Cancel.svg';
 
 class Players extends PureComponent {
-
-
 
   render() {
     const {name,
@@ -18,11 +16,11 @@ class Players extends PureComponent {
           decreaseScore} = this.props;
 
     return (
-      <div className="player-container">
-        <div className="player-name">
+      <div className="Player">
+        <div className="PlayerName">
           <h2>{name}</h2>
         </div>
-        <img src={Cancel} className="remove-button" onClick={ () => removePlayer(id)} />
+        <img src={Cancel} className="RemoveButton" onClick={ () => removePlayer(id)} />
         <Counter
           score={score}
           increaseScore={increaseScore}

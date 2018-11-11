@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
+import './Counter.scss'
 
 const Counter = (props) =>  {
 
@@ -9,10 +10,12 @@ const Counter = (props) =>  {
   const {index, decreaseScore, increaseScore, score} = props;
 
   return (
-    <div className="counter-container">
-      <Button className="decrement-button" onClick={() => decreaseScore(index)}> - </Button>
-      <span className="player-score">{score}</span>
-      <Button className="increment-button" onClick={() => increaseScore(index)}> + </Button>
+    <div className="Counter">
+      <div className="CounterSecondary">
+        <Button onClick={() => decreaseScore(index)}> - </Button>
+        <span>{score}</span>
+        <Button onClick={() => increaseScore(index)}> + </Button>
+      </div>
     </div>
   )
 }

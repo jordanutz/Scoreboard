@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {FormGroup, FormControl, Button} from 'react-bootstrap';
-import './AddPlayer.css'
+import './AddPlayer.scss'
 import AddCircle from './Assets/AddCircle.svg'
-
 
 class AddPlayer extends Component {
   constructor() {
@@ -40,18 +39,16 @@ class AddPlayer extends Component {
     const isEnabled = addPlayer.length > 0;
 
     return (
-      <div className="addplayer-container">
-          <form className="form-container">
-            <FormGroup
-             controlId="formBasicText"
-           >
+      <div className="AddPlayer">
+          <form className="AddPlayerForm">
+            <FormGroup controlId="formBasicText">
 
            <FormControl
              type="text"
              value={this.state.addPlayer}
              placeholder="Enter a Player's Name"
              onChange={this.handleAddPlayer}
-             className="form-input"
+             className="FormInput"
            />
 
             </FormGroup>
@@ -59,11 +56,10 @@ class AddPlayer extends Component {
 
           <img
             src= {AddCircle}
-            className="add-icon"
+            className="AddIcon"
             disabled={!isEnabled}
-            onClick={this.handleSubmit} />
-
-
+            onClick={this.handleSubmit}
+          />
       </div>
     )
   }

@@ -1,0 +1,85 @@
+@import '../../index';
+
+.Players {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    font-size: 3em;
+    font-family: $primary-font;
+  }
+
+  .PlayersPanel {
+    width: 65%;
+
+    .Main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .MainSecondary {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1em;
+
+      .MainStats {
+        display: flex;
+      }
+
+      .MainStopwatch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.75em;
+        font-family: $secondary-font;
+      }
+    }
+
+    .PlayerProfile {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-family: $secondary-font;
+      font-size: 2em;
+      color: #333;
+
+      .PlayerSingle {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+
+.panel-default > .panel-heading {
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 991px) {
+  .PlayersPanel {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Players h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .QueryColumn {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .QueryStats {
+    text-align: center;
+  }
+}

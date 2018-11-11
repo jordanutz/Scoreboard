@@ -1,0 +1,18 @@
+@import '../../index';
+
+.Counter {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+
+  .CounterSecondary {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  Button {
+    width: 3em;
+  }
+}
