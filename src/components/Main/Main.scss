@@ -1,18 +1,25 @@
 @import '../../index';
 
 .Players {
-  width: 100%;
+  max-width: 800px;
   height: auto;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  position: relative;
+
 
   h1 {
-    font-size: 3em;
+    font-size: $primary-size;
     font-family: $primary-font;
+    font-weight: bolder;
+    position: absolute;
+    z-index: 10;
+    top: -30px;
   }
 
   .PlayersPanel {
-    width: 65%;
+    width: 100%;
 
     .Main {
       display: flex;
@@ -22,7 +29,7 @@
     .MainSecondary {
       display: flex;
       justify-content: space-between;
-      margin-top: 1em;
+      padding-top: 2em;
 
       .MainStats {
         display: flex;
@@ -55,31 +62,9 @@
 
 
 .panel-default > .panel-heading {
-  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-  color: white;
+  color: #333;
   display: flex;
   flex-direction: column;
   width: 100%;
-}
 
-
-@media screen and (max-width: 991px) {
-  .PlayersPanel {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .Players h1 {
-    font-size: 2em;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .QueryColumn {
-    width: 100%;
-    margin-top: 1em;
-  }
-  .QueryStats {
-    text-align: center;
-  }
 }

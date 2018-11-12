@@ -2,11 +2,13 @@
 
 .AddPlayer {
   display: flex;
+  flex-direction: column;
   width: 100%;
+  padding-top: .25em;
 
   .AddPlayerForm {
-    width: 85%;
-    margin-right: 1em;
+    width: 100%;
+    height: auto;
 
     .FormInput {
       width: 100%;
@@ -14,8 +16,15 @@
   }
 
   .AddIcon {
-    width: 1.75em;
-    height: 1.75em;
-    cursor: pointer;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 1.75em;
+      height: 1.75em;
+      cursor: pointer;
+    }
   }
 }

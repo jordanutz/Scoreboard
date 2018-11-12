@@ -5,6 +5,24 @@ import {Button} from 'react-bootstrap';
 import Cancel from './Assets/Cancel.svg';
 
 class Players extends PureComponent {
+  constructor () {
+    super()
+    this.state = {
+      hoverRemove: false
+    }
+  }
+
+  hoverOn = () => {
+    this.setState({
+      hoverRemove: true
+    })
+  }
+
+  hoverOff = () => {
+    this.setState({
+      hoverRemove: false
+    })
+  }
 
   render() {
     const {name,
@@ -18,9 +36,9 @@ class Players extends PureComponent {
     return (
       <div className="Player">
         <div className="PlayerName">
-          <h2>{name}</h2>
+          <h2 onMouseEnter={this.hoverOn}  onClick={ () => removePlayer(id)} onMouseLeave={this.hoverOff}>{name}</h2>
         </div>
-        <img src={Cancel} className="RemoveButton" onClick={ () => removePlayer(id)} />
+        <img src={Cancel} className={this.state.hoverRemove ? "RemoveButton" : "HideButton"} />
         <Counter
           score={score}
           increaseScore={increaseScore}

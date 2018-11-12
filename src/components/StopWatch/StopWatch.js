@@ -54,7 +54,6 @@ class StopWatch extends Component {
     return (
       <div className="Stopwatch">
         <div className="StopwatchInfo">
-          <h2>Stopwatch</h2>
           <span>{seconds}</span>
         </div>
 

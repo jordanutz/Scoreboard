@@ -54,12 +54,16 @@ class AddPlayer extends Component {
             </FormGroup>
           </form>
 
-          <img
-            src= {AddCircle}
-            className="AddIcon"
-            disabled={!isEnabled}
-            onClick={this.handleSubmit}
-          />
+          <div className="AddIcon">
+
+            <img
+              src= {AddCircle}
+              className="AddIcon"
+              disabled={!isEnabled}
+              onClick={this.handleSubmit}
+            />
+
+          </div>
       </div>
     )
   }

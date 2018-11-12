@@ -4,22 +4,29 @@
 .Player  {
   display: flex;
   justify-content: space-between;
-  padding: .5em;
   width: 100%;
   height: auto;
   position: relative;
+  align-items: center;
 
   .PlayerName {
     h2 {
       cursor: pointer;
+      padding-left: .4em;
+      font-size: .75em;
+      margin-left: .25em;
     }
   }
 
   .RemoveButton {
     position: absolute;
     left: 0;
-    width: .5em;
-    height: .5em;
+    width: .4em;
+    height: .4em;
     cursor: pointer;
+  }
+
+  .HideButton {
+    display: none;
   }
 }
