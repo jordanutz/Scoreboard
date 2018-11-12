@@ -16,11 +16,16 @@
       background: none;
       border: none;
       font-size: 1.15em;
+      color: #FFE40F;
     }
 
     Button:focus {
       background: none;
       border: none;
+    }
+
+    span {
+      color: #111;
     }
   }
 

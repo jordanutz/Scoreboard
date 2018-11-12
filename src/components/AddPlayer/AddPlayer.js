@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {FormGroup, FormControl, Button} from 'react-bootstrap';
+import React, {Component} from 'react'
+import {FormGroup, FormControl, Button} from 'react-bootstrap'
 import './AddPlayer.scss'
 import AddCircle from './Assets/AddCircle.svg'
 
@@ -9,8 +9,6 @@ class AddPlayer extends Component {
     this.state = {
       addPlayer: ''
     }
-    this.handleAddPlayer = this.handleAddPlayer.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleAddPlayer = (e) => {
@@ -21,8 +19,8 @@ class AddPlayer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addPlayer(this.state.addPlayer)
     this.resetAddForm();
+    this.state.addPlayer.length > 0 && this.props.addPlayer(this.state.addPlayer)
   }
 
   resetAddForm = () => {
@@ -55,11 +53,12 @@ class AddPlayer extends Component {
           </form>
 
           <div className="AddIcon">
-
+            <div className="Copyright">
+              
+            </div>
             <img
               src= {AddCircle}
               className="AddIcon"
-              disabled={!isEnabled}
               onClick={this.handleSubmit}
             />
 

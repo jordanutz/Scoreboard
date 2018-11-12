@@ -9,14 +9,13 @@
   position: relative;
   align-items: center;
 
-  .PlayerName {
     h2 {
       cursor: pointer;
       padding-left: .4em;
-      font-size: .75em;
+      font-size: 1em;
       margin-left: .25em;
+      color: #111;
     }
-  }
 
   .RemoveButton {
     position: absolute;
@@ -28,5 +27,18 @@
 
   .HideButton {
     display: none;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .Player {
+    h2 {
+      font-size: 1.5em;
+    }
+
+    .RemoveButton {
+      width: .75em;
+      height: .75em;
+    }
   }
 }

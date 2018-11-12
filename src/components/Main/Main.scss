@@ -10,12 +10,18 @@
 
 
   h1 {
-    font-size: $primary-size;
+    font-size: 3em;
     font-family: $primary-font;
     font-weight: bolder;
     position: absolute;
     z-index: 10;
-    top: -30px;
+    top: -25px;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: -2px;
   }
 
   .PlayersPanel {
@@ -62,9 +68,18 @@
 
 
 .panel-default > .panel-heading {
-  color: #333;
+  color: #efefef;
   display: flex;
   flex-direction: column;
   width: 100%;
+  background: #101010;
+}
 
+@media screen and (min-width: 990px) {
+  .Players {
+    h1 {
+      font-size: 5em;
+      top: -45px;
+    }
+  }
 }

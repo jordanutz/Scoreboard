@@ -4,11 +4,19 @@ $primary-color: black;
 $secondary-color: orange;
 $primary-font: 'Pixel Point';
 $secondary-font: 'Passion One', cursive;
-$primary-size: 4em;
 $secondary-size: 1.75em;
 
 
 
 h1, h2, h3 {
   text-transform: uppercase;
+}
+
+body {
+  background: black;
+  background-image: url('https://ubisafe.org/images/crowd-drawing-background-5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: fill;
+  min-height: 100vh;
 }
